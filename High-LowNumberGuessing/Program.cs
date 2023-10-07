@@ -25,7 +25,11 @@ namespace ConsoleApp
                 else
                 {
                     if (guesses > 0) 
-                    { 
+                    {
+                        if (Math.Abs(userInput - randomNumber) <= 5)
+                        {
+                            Console.WriteLine("You're close!!");
+                        }
                     if (userInput > randomNumber)
                         {
                             Console.WriteLine("You guessed incorrectly. The number you guessed was too high.");
