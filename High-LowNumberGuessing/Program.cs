@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             const int GUESSES_INITIAL_AMOUNT = 5;
+
             int guessesRemaining = GUESSES_INITIAL_AMOUNT;
             int userInput = 0;
             Random rng = new Random();
@@ -24,7 +25,7 @@
 
                 if (guessesRemaining > 0)
                 {
-                    if (Math.Abs(userInput - randomNumber) <= 5)
+                    if (Math.Abs(userInput - randomNumber) <= GUESSES_INITIAL_AMOUNT)
                     {
                         Console.WriteLine("You're close!!");
                     }
