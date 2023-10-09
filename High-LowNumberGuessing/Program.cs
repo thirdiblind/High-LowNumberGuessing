@@ -8,7 +8,7 @@
             int guessesRemaining = GUESSES_INITIAL_AMOUNT;
             int userInput = 0;
             Random rng = new Random();
-            int randomNumber = rng.Next(0, 100);
+            int randomNumber = rng.Next(0, 101);
 
             while (guessesRemaining > 0)
             {
