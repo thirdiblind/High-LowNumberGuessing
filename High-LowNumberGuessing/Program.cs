@@ -32,13 +32,13 @@ namespace ConsoleApp
                     if (userInput > randomNumber)
                     {
                         Console.WriteLine("You guessed incorrectly. The number you guessed was too high.");
-                        guessesRemaining--;
                     }
                     if (userInput < randomNumber)
                     {
                         Console.WriteLine("You guessed incorrectly. The number you guessed was too low.");
-                        guessesRemaining--;
+                        
                     }
+                    guessesRemaining--;
                 }
 
             }
