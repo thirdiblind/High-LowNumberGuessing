@@ -40,10 +40,7 @@
                 }
 
             }
-            if (guessesRemaining == 0)
-            {
                 Console.WriteLine($"Sorry, you've run out of guesses. The correct number was {randomNumber}.");
-            }
 
         }
     }
