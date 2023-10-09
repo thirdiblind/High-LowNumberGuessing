@@ -21,26 +21,28 @@
                     Console.WriteLine("You guessed correctly.");
                     break;
                 }
+
                 if (guessesRemaining > 0)
                 {
                     if (Math.Abs(userInput - randomNumber) <= 5)
                     {
                         Console.WriteLine("You're close!!");
                     }
+
                     if (userInput > randomNumber)
                     {
                         Console.WriteLine("You guessed incorrectly. The number you guessed was too high.");
                     }
+
                     if (userInput < randomNumber)
                     {
                         Console.WriteLine("You guessed incorrectly. The number you guessed was too low.");
-
                     }
                     guessesRemaining--;
                 }
 
             }
-                Console.WriteLine($"Sorry, you've run out of guesses. The correct number was {randomNumber}.");
+            Console.WriteLine($"Sorry, you've run out of guesses. The correct number was {randomNumber}.");
 
         }
     }
