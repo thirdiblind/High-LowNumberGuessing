@@ -6,15 +6,16 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            int guesses = 5;
+            const int GUESSES_INITIAL_AMOUNT = 5;
+            int guessesRemaining = GUESSES_INITIAL_AMOUNT;
             int userInput = 0;
             Random rng = new Random();
             int randomNumber = rng.Next(0, 100);
 
-            while (guesses > 0)
+            while (guessesRemaining > 0)
             {
-                
-                Console.WriteLine($"Guess a number from 0-100. You have {guesses} guesses left. Good luck!");
+
+                Console.WriteLine($"Guess a number from 0-100. You have {guessesRemaining} left. Good luck!");
                 userInput = Int32.Parse(Console.ReadLine());
 
                 if (userInput == randomNumber)
@@ -22,29 +23,26 @@ namespace ConsoleApp
                     Console.WriteLine("You guessed correctly.");
                     break;
                 }
-                else
+                if (guessesRemaining > 0)
                 {
-                    if (guesses > 0) 
+                    if (Math.Abs(userInput - randomNumber) <= 5)
                     {
-                        if (Math.Abs(userInput - randomNumber) <= 5)
-                        {
-                            Console.WriteLine("You're close!!");
-                        }
+                        Console.WriteLine("You're close!!");
+                    }
                     if (userInput > randomNumber)
-                        {
-                            Console.WriteLine("You guessed incorrectly. The number you guessed was too high.");
-                            guesses--;
-                        }
+                    {
+                        Console.WriteLine("You guessed incorrectly. The number you guessed was too high.");
+                        guessesRemaining--;
+                    }
                     if (userInput < randomNumber)
-                        {
-                            Console.WriteLine("You guessed incorrectly. The number you guessed was too low.");
-                            guesses--;
-                        }
+                    {
+                        Console.WriteLine("You guessed incorrectly. The number you guessed was too low.");
+                        guessesRemaining--;
                     }
                 }
 
             }
-            if (guesses == 0)
+            if (guessesRemaining == 0)
             {
                 Console.WriteLine($"Sorry, you've run out of guesses. The correct number was {randomNumber}.");
             }
