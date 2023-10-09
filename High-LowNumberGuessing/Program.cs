@@ -1,6 +1,4 @@
-﻿using System.Transactions;
-
-namespace ConsoleApp
+﻿namespace ConsoleApp
 {
     class Program
     {
@@ -36,7 +34,7 @@ namespace ConsoleApp
                     if (userInput < randomNumber)
                     {
                         Console.WriteLine("You guessed incorrectly. The number you guessed was too low.");
-                        
+
                     }
                     guessesRemaining--;
                 }
