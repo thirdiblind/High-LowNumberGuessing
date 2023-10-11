@@ -42,9 +42,12 @@
                 }
                 guessesRemaining--;
 
-
             }
-            if (userInput != randomNumber) Console.WriteLine($"Sorry, you've run out of guesses. The correct number was {randomNumber}.");
+
+            if (userInput != randomNumber)
+            {
+                Console.WriteLine($"Sorry, you've run out of guesses. The correct number was {randomNumber}.");
+            }
         }
     }
 }
